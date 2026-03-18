@@ -1,0 +1,129 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+  release:
+    types: [ published ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-22.04
+    strategy:
+      matrix:
+        compiler: [gcc, clang]
+        include:
+          - compiler: gcc
+            cc: gcc
+            cxx: g++
+          - compiler: clang
+            cc: clang
+            cxx: clang++
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Intel oneAPI
+      run: |
+        wget -O- https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODUCTS.PUB | gpg --dearmor | sudo tee /usr/share/keyrings/oneapi-archive-keyring.gpg > /dev/null
+        echo "deb [signed-by=/usr/share/keyrings/oneapi-archive-keyring.gpg] https://apt.repos.intel.com/oneapi all main" | sudo tee /etc/apt/sources.list.d/oneAPI.list
+        sudo apt-get update
+        sudo apt-get install -y intel-oneapi-dpcpp-cpp
+
+    - name: Configure CMake
+      run: |
+        source /opt/intel/oneapi/setvars.sh
+        mkdir build && cd build
+        cmake .. -DCMAKE_C_COMPILER=${{ matrix.cc }} \
+                 -DCMAKE_CXX_COMPILER=${{ matrix.cxx }} \
+                 -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} \
+                 -DAVM_ENABLE_SYCL=ON \
+                 -DAVM_BUILD_TESTS=ON \
+                 -DAVM_BUILD_EXAMPLES=ON
+
+    - name: Build
+      run: |
+        source /opt/intel/oneapi/setvars.sh
+        cd build
+        cmake --build . --config ${{ env.BUILD_TYPE }} -j$(nproc)
+
+    - name: Test
+      run: |
+        source /opt/intel/oneapi/setvars.sh
+        cd build
+        ctest --build-config ${{ env.BUILD_TYPE }} --output-on-failure
+
+  build-windows:
+    runs-on: windows-2022
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install Intel oneAPI (Windows)
+      shell: pwsh
+      run: |
+        choco install intel-oneapi-dpcpp -y
+
+    - name: Configure CMake
+      shell: pwsh
+      run: |
+        mkdir build
+        cd build
+        cmake .. -DCMAKE_BUILD_TYPE=${{ env.BUILD_TYPE }} -DAVM_ENABLE_SYCL=ON -DAVM_BUILD_TESTS=ON
+
+    - name: Build
+      shell: pwsh
+      run: |
+        cd build
+        cmake --build . --config ${{ env.BUILD_TYPE }} -j
+
+  code-quality:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Check code formatting
+      run: |
+        sudo apt-get install -y clang-format
+        find src tests examples -name "*.cpp" -o -name "*.hpp" | head -20 | xargs clang-format --dry-run --Werror || true
+
+    - name: Run cppcheck
+      run: |
+        sudo apt-get install -y cppcheck
+        cppcheck --enable=warning,performance --suppress=missingIncludeSystem src/ || true
+
+  security-scan:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run CodeQL Analysis
+      uses: github/codeql-action/init@v3
+      with:
+        languages: cpp
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+
+  release:
+    needs: [build-linux, build-windows]
+    runs-on: ubuntu-22.04
+    if: github.event_name == 'release'
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Package Release
+      run: |
+        mkdir -p release
+        cp -r src cmake examples docs LICENSE README.md CHANGELOG.md release/
+        tar -czvf avm-sycl-${{ github.event.release.tag_name }}.tar.gz -C release .
+
+    - name: Upload Release Asset
+      uses: softprops/action-gh-release@v1
+      with:
+        files: avm-sycl-${{ github.event.release.tag_name }}.tar.gz
