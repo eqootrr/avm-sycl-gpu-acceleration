@@ -16,6 +16,15 @@
 namespace avm {
 namespace sycl {
 
+// Helper macros for loop filter calculations
+#ifndef ROUND_POWER_OF_TWO
+#define ROUND_POWER_OF_TWO(value, n) (((value) + (1 << ((n) - 1))) >> (n))
+#endif
+
+#ifndef DF_SHIFT
+#define DF_SHIFT 0
+#endif
+
 // ============================================================================
 // Helper Kernels for SYCL
 // ============================================================================

@@ -65,7 +65,7 @@ void fdct8x8(::sycl::queue& q, const int16_t* input, tran_low_t* output,
              int stride, const TxfmParams& params);
 
 /// @brief 2D Forward 16x16 DCT-II
-void fdct16x16(sycl:: queue& q, const int16_t* input, tran_low_t* output,
+void fdct16x16(::sycl::queue& q, const int16_t* input, tran_low_t* output,
                int stride, const TxfmParams& params);
 
 /// @brief 2D Forward 32x32 DCT-II

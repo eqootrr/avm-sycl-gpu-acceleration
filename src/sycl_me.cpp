@@ -225,7 +225,7 @@ void sad8x8(::sycl::queue& q, const uint16_t* src, int src_stride,
 
     const int num_groups_x = (2 * search_range + 1);
     const int num_groups_y = (2 * search_range + 1);
-    cgh.parallel_for<sycl::submit<class SAD8x8Kernel>>(
+    cgh.parallel_for<class SAD8x8Kernel>(
       sycl::nd_range<2>{num_groups_y * 8, num_groups_x * 8},
       sycl::nd_range<2>{8, 8}, kern);
   });
@@ -294,7 +294,7 @@ void sad32x32(::sycl::queue& q, const uint16_t* src, int src_stride,
 
     const int num_groups_x = (2 * search_range + 1);
     const int num_groups_y = (2 * search_range + 1);
-    cgh.parallel_for<sycl::submit<class SAD32x32Kernel>>(
+    cgh.parallel_for<class SAD32x32Kernel>(
       sycl::nd_range<3>{4, num_groups_y * 16, num_groups_x * 16},
       sycl::nd_range<3>{1, 16, 16}, kern);
   });
@@ -366,7 +366,7 @@ void sad64x64(::sycl::queue& q, const uint16_t* src, int src_stride,
 
     const int num_groups_x = (2 * search_range + 1);
     const int num_groups_y = (2 * search_range + 1);
-    cgh.parallel_for<sycl::submit<class SAD64x64Kernel>>(
+    cgh.parallel_for<class SAD64x64Kernel>(
       sycl::nd_range<3>{16, num_groups_y * 16, num_groups_x * 16},
       sycl::nd_range<3>{1, 16, 16}, kern);
   });

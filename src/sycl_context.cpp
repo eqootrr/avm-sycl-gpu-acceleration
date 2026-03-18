@@ -114,6 +114,12 @@ int SYCLContext::score_device(const ::sycl::device& dev) {
 ::sycl::device SYCLContext::select_best_device() {
     auto devices = ::sycl::device::get_devices(::sycl::info::device_type::all);
 
+    if (devices.empty()) {
+        std::cerr << "[SYCL] No devices available in select_best_device()" << std::endl;
+        // Return a default device (will be CPU if available)
+        return ::sycl::device(::sycl::default_selector{});
+    }
+
     ::sycl::device best = devices[0];
     int best_score = score_device(best);
 
