@@ -186,6 +186,26 @@ Join our community to discuss GPU acceleration, report issues, and contribute!
 
 ---
 
+## 🧪 Test Results
+
+### Verified Platform: Intel Xeon Gold 6530 + Intel OpenCL
+
+| Test | Description | Time | Status |
+|------|-------------|------|:------:|
+| Vector Add | 1024 elements | 287.5 ms | ✅ PASSED |
+| DCT 8x8 | Transform kernel | 180.5 ms | ✅ PASSED |
+| SAD 16x16 | Motion estimation | 1.5 ms | ✅ PASSED |
+| Performance | 1000 DCT benchmark | 50.1 ms | ✅ PASSED |
+
+**Performance Metrics:**
+- DCT 8x8 average: 50.14 μs
+- DCT throughput: 19,945 DCT/sec
+- All 4 tests passed ✅
+
+> 📋 **Full test report:** See [TEST_REPORT.md](docs/TEST_REPORT.md)
+
+---
+
 ## 💻 API Usage
 
 ### Minimal Example
